@@ -15,6 +15,8 @@ class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
       appBar: AppBar(
         title: Text(" Language Translator "),
         centerTitle: true,
+        backgroundColor: Color(0xff10223d),
+        elevation: 0,
       ),
     );
   }
