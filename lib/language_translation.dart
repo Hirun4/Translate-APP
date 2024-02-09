@@ -12,6 +12,7 @@ class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff10223d),
       appBar: AppBar(
         title: Text(" Language Translator "),
         centerTitle: true,
