@@ -19,6 +19,28 @@ class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
         backgroundColor: Color(0xff10223d),
         elevation: 0,
       ),
+      body: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 50,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  DropdownButton(
+                    focusColor: Colors.white,
+                    iconDisabledColor: Colors.white,
+                    iconEnabledColor: Colors.white,
+                    hint: Text(),
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
