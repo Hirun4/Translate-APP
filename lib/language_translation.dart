@@ -9,6 +9,11 @@ class LanguageTranslationPage extends StatefulWidget {
 }
 
 class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
+  var languages = ['Hindi', 'English', 'Marathi'];
+  var originLanguage = 'From';
+  var destinationLanguage = 'To';
+  var output = "";
+  TextEditingController languageController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
