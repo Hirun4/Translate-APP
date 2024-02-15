@@ -38,7 +38,18 @@ class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
                     focusColor: Colors.white,
                     iconDisabledColor: Colors.white,
                     iconEnabledColor: Colors.white,
-                    hint: Text(),
+                    hint: Text(
+                      originLanguage,
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    dropdownColor: Colors.white,
+                    icon: Icon(Icons.keyboard_arrow_down),
+                    items: languages.map((String dropDownStringItem) {
+                      return DropdownMenuItem(
+                        child: Text(dropDownStringItem),
+                        value: dropDownStringItem,
+                      );
+                    }).toList(),
                   )
                 ],
               )
