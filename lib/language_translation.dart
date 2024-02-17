@@ -50,7 +50,45 @@ class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
                         value: dropDownStringItem,
                       );
                     }).toList(),
-                  )
+                    onChanged: (String? value) {
+                      setState(() {
+                        originLanguage = value!;
+                      });
+                    },
+                  ),
+                  SizedBox(
+                    width: 40,
+                  ),
+                  Icon(
+                    Icons.arrow_right_alt_outlined,
+                    color: Colors.white,
+                    size: 40,
+                  ),
+                  SizedBox(
+                    width: 40,
+                  ),
+                  DropdownButton(
+                    focusColor: Colors.white,
+                    iconDisabledColor: Colors.white,
+                    iconEnabledColor: Colors.white,
+                    hint: Text(
+                      destinationLanguage,
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    dropdownColor: Colors.white,
+                    icon: Icon(Icons.keyboard_arrow_down),
+                    items: languages.map((String dropDownStringItem) {
+                      return DropdownMenuItem(
+                        child: Text(dropDownStringItem),
+                        value: dropDownStringItem,
+                      );
+                    }).toList(),
+                    onChanged: (String? value) {
+                      setState(() {
+                        destinationLanguage = value!;
+                      });
+                    },
+                  ),
                 ],
               )
             ],
