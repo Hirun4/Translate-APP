@@ -90,6 +90,17 @@ class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
                     },
                   ),
                 ],
+              ),
+              SizedBox(
+                height: 40,
+              ),
+              Padding(
+                padding: EdgeInsets.all(8),
+                child: TextFormField(
+                  cursorColor: Colors.white,
+                  autofocus: false,
+                  style: TextStyle(color: Colors.white),
+                ),
               )
             ],
           ),
