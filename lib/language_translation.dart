@@ -100,6 +100,22 @@ class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
                   cursorColor: Colors.white,
                   autofocus: false,
                   style: TextStyle(color: Colors.white),
+                  decoration: InputDecoration(
+                    labelText: 'Please enter your text..',
+                    labelStyle: TextStyle(fontSize: 15, color: Colors.white),
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white, width: 1)),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white, width: 1),
+                    ),
+                    errorStyle: TextStyle(color: Colors.red, fontSize: 15),
+                  ),
+                  controller: languageController,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'please enter text to translate';
+                    }
+                  },
                 ),
               )
             ],
