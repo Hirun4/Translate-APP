@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:translator/translator.dart';
 
 class LanguageTranslationPage extends StatefulWidget {
   const LanguageTranslationPage({super.key});
@@ -14,6 +15,12 @@ class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
   var destinationLanguage = 'To';
   var output = "";
   TextEditingController languageController = TextEditingController();
+
+  void translate(String src, String dest, String input) async {
+    GoogleTranslator translator = new GoogleTranslator();
+    var translation = await translator.translate(input, from: src, to: dest);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -115,8 +122,16 @@ class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
                     if (value == null || value.isEmpty) {
                       return 'please enter text to translate';
                     }
+                    return null;
                   },
                 ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(8),
+                child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(primary: Color(0xff2b3c5a)),
+                    onPressed: () {},
+                    child: Text("Translate")),
               )
             ],
           ),
