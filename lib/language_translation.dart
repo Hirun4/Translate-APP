@@ -19,6 +19,15 @@ class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
   void translate(String src, String dest, String input) async {
     GoogleTranslator translator = new GoogleTranslator();
     var translation = await translator.translate(input, from: src, to: dest);
+    setState(() {
+      output = translation.text.toString();
+    });
+
+    if (src == '--' || dest == '--') {
+      setState(() {
+        output = "Fail to translate";
+      });
+    }
   }
 
   @override
@@ -130,7 +139,9 @@ class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
                 padding: EdgeInsets.all(8),
                 child: ElevatedButton(
                     style: ElevatedButton.styleFrom(primary: Color(0xff2b3c5a)),
-                    onPressed: () {},
+                    onPressed: () {
+                      translate(src, dest, input)
+                    },
                     child: Text("Translate")),
               )
             ],
