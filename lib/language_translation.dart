@@ -10,7 +10,7 @@ class LanguageTranslationPage extends StatefulWidget {
 }
 
 class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
-  var languages = ['Hindi', 'English', 'Marathi'];
+  var languages = ['Hindi', 'English', 'Arabic'];
   var originLanguage = 'From';
   var destinationLanguage = 'To';
   var output = "";
@@ -29,6 +29,8 @@ class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
       });
     }
   }
+
+  
 
   @override
   Widget build(BuildContext context) {
