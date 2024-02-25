@@ -30,7 +30,13 @@ class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
     }
   }
 
-  
+  String getLanguageCode(String language){
+    if (language == "English") {
+      return "en";
+    }
+  }
+
+
 
   @override
   Widget build(BuildContext context) {
