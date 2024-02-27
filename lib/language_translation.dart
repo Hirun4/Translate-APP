@@ -33,7 +33,12 @@ class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
   String getLanguageCode(String language){
     if (language == "English") {
       return "en";
+    }else if(language == "Hindi"){
+      return "hi";
+    }else if(language == "Arabic"){
+      return "ar";
     }
+    return "--";
   }
 
 
