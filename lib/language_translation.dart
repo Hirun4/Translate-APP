@@ -30,18 +30,16 @@ class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
     }
   }
 
-  String getLanguageCode(String language){
+  String getLanguageCode(String language) {
     if (language == "English") {
       return "en";
-    }else if(language == "Hindi"){
+    } else if (language == "Hindi") {
       return "hi";
-    }else if(language == "Arabic"){
+    } else if (language == "Arabic") {
       return "ar";
     }
     return "--";
   }
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -153,9 +151,22 @@ class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
                 child: ElevatedButton(
                     style: ElevatedButton.styleFrom(primary: Color(0xff2b3c5a)),
                     onPressed: () {
-                      translate(src, dest, input)
+                      translate(
+                          getLanguageCode(originLanguage),
+                          getLanguageCode(destinationLanguage),
+                          languageController.text.toString());
                     },
                     child: Text("Translate")),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Text(
+                "\n$output",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20),
               )
             ],
           ),
