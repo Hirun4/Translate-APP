@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:language_translator/language_translation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Language Translator',
       debugShowCheckedModeBanner: false,
-      home: ,
+      home: LanguageTranslationPage(),
     );
   }
 }
