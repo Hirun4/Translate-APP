@@ -64,7 +64,7 @@ class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   DropdownButton(
-                    focusColor: Colors.white,
+                    focusColor: Color.fromARGB(255, 120, 170, 175),
                     iconDisabledColor: Colors.white,
                     iconEnabledColor: Colors.white,
                     hint: Text(
@@ -97,7 +97,7 @@ class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
                     width: 40,
                   ),
                   DropdownButton(
-                    focusColor: Colors.white,
+                    focusColor: Color.fromARGB(255, 140, 202, 203),
                     iconDisabledColor: Colors.white,
                     iconEnabledColor: Colors.white,
                     hint: Text(
@@ -151,14 +151,21 @@ class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
               Padding(
                 padding: EdgeInsets.all(8),
                 child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(primary: Color(0xff2b3c5a)),
+                    style: ElevatedButton.styleFrom(
+                        primary: Color.fromARGB(255, 132, 224, 71)),
                     onPressed: () {
                       translate(
                           getLanguageCode(originLanguage),
                           getLanguageCode(destinationLanguage),
                           languageController.text.toString());
                     },
-                    child: Text("Translate")),
+                    child: Text(
+                      "Translate",
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20),
+                    )),
               ),
               SizedBox(
                 height: 20,
